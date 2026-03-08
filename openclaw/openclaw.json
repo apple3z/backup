@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.2",
+    "lastTouchedAt": "2026-03-07T22:59:00.350Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-06T08:57:18.378Z",
+    "lastRunVersion": "2026.3.2",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/v1",
+        "apiKey": "sk-cp-towqaE-f69uzabxpupRDQiKsSyy9KpP2iEgHxoRFCdgNvXHmeHRno69iXrEQ7hPNYiOXPTUc0_vfI4JVwmrKnblVvkG5OVSXYT0cIl48oFsBZgswAw_GuJI",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16384
+          }
+        ]
+      },
+      "dashscope": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-sp-c8494a6a33384faeb8d2b63a9d4a6a88",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5-plus",
+            "name": "Qwen3.5 Plus",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32000,
+            "maxTokens": 6000
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "Qwen3 Coder Plus",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32000,
+            "maxTokens": 6000
+          },
+          {
+            "id": "qwen3-coder-next",
+            "name": "Qwen3 Coder Next",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 32000,
+            "maxTokens": 6000
+          },
+          {
+            "id": "glm-5",
+            "name": "GLM-5",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8000
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "dashscope/qwen3-coder-next"
+      },
+      "models": {
+        "dashscope/qwen3-coder-next": {}
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "feishu": {
+      "appId": "cli_a92ba507b3745cb2",
+      "appSecret": "aoYJUlvu9SbcpxEmv7VKGdp7mBVssrKN",
+      "enabled": true,
+      "connectionMode": "websocket",
+      "dmPolicy": "pairing",
+      "debugMode": true
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "1ae2e1a32d1cb68be3940fff496393d1295a4d0f761db385"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    }
+  }
+}
