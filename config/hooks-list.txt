@@ -1,0 +1,5 @@
+self-improvement
+总计 12
+drwxrwxr-x  3 zhang zhang 4096  3月  9 13:29 .
+drwx------ 21 zhang zhang 4096  3月  9 13:35 ..
+drwxrwxr-x  2 zhang zhang 4096  3月  9 13:29 self-improvement

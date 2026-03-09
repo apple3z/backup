@@ -1,0 +1,34 @@
+{
+  "jobs": [
+    {
+      "id": "2e242258-8eed-4b40-9cb6-cc0a22c35d4e",
+      "name": "Daily Auto-Update",
+      "enabled": true,
+      "createdAtMs": 1773034152962,
+      "updatedAtMs": 1773034152962,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 14 * * *",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run daily auto-updates: check for Clawdbot updates and update all skills. Report what was updated."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1773036000000
+      }
+    }
+  ],
+  "total": 1,
+  "offset": 0,
+  "limit": 1,
+  "hasMore": false,
+  "nextOffset": null
+}
